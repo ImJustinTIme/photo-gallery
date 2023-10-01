@@ -1,88 +1,116 @@
 <script>
+  import PhotoSection from "./photoSection.svelte";
   let photos = [
     // Add the URLs of your photos here
-    "DSCF1583.jpg",
-    "DSCF1595.jpg",
-    "DSCF1231_1.JPG",
-    "DSCF1583.jpg",
-    "DSCF1595.jpg",
-    "DSCF1231_1.JPG",
-    // Add more photo URLs as needed
+    {
+      names: ["DSCF1231_1.JPG"],
+      description:
+        "Photo of black-capped chickadee taken spring 2023 in Spokane",
+    },
+    {
+      names: ["DSCF1231_1.JPG", "DSCF1595.jpg"],
+      description:
+        "Photo of black-capped chickadee taken spring 2023 in Spokane",
+    },
+    {
+      names: ["DSCF1231_1.JPG"],
+      description:
+        "Photo of black-capped chickadee taken spring 2023 in Spokane",
+    },
+    {
+      names: ["DSCF1231_1.JPG"],
+      description:
+        "Photo of black-capped chickadee taken spring 2023 in Spokane",
+    },
   ];
 </script>
 
 <div class="app">
-  <div class="container">
-    <nav class="navbar">
+  <div class="card-content">
+    <nav class="side-nav">
+      <!-- Side navigation links -->
       <img src="Crunchy.png" alt="Logo" class="navbar-logo" />
-      <h1>Justin's Photos</h1>
+      <a href="#section1">Photos</a>
+      <a href="#section2">Digital Art</a>
+      <!-- Add more navigation links as needed -->
     </nav>
-
-    <div class="gallery">
-      {#each photos as photo, index}
-        <img class="photo" src={photo} alt={`Photo ${index + 1}`} />
-      {/each}
+    <div class="content">
+      <div class="container">
+        <div class="gallery">
+          {#each photos as section, index}
+            <PhotoSection photos={section} {index} />
+          {/each}
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
 <style>
   .app {
-    margin: 0;
-    padding: 0;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+    /* Make the gallery at least 100% of the viewport height */
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    background-color: #f0f0f0; /* Light gray background */
+    height: 99%;
+    overflow-y: hidden;
+    justify-content: space-around; /* Distribute space evenly around elements */
+  }
+
+  .side-nav {
+    min-width: 15vw;
+    background-color: #fff; /* Background color for the side navigation */
+    color: #000;
+    display: flex;
+    align-items: end;
+    padding-top: 2rem;
+    flex-direction: column;
+	font-size: 16px;
+    z-index: 1; /* Ensure it's above other content */
+  }
+
+  .side-nav a {
+    color: black; /* Text color for navigation links */
+    text-decoration: none; /* Remove underlines from links */
+    margin: .5rem; /* Adjust spacing between links */
+	font-weight: 500;
+  }
+
+  .content {
+    flex-grow: 1; /* Allow content to expand to fill remaining space */
+    background-color: #f0f0f0; /* Background color for the content area */
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    background-color: #f0f0f0; /* Light gray background */
-    min-height: 100vh; /* Make the gallery at least 100% of the viewport height */
+    overflow-y: auto;
   }
 
   .container {
-    max-width: 80%; /* Set a maximum width of 70% for the content */
     width: 100%;
-    padding: 1rem;
-  }
-
-  .navbar {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    color: black;
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
   }
 
   .gallery {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next row */
-    justify-content: center; /* Center items horizontally */
-    grid-gap: 1rem;
+    width: 100%;
+    padding-top: 2rem;
+    padding-left: 2rem;
     background-color: white; /* White gallery background */
-    border-radius: 5px; /* Rounded corners for the gallery */
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Light shadow for the gallery */
   }
 
   .navbar-logo {
-    width: 40px; /* Adjust the width of the logo as needed */
+    width: 30px; /* Adjust the width of the logo as needed */
     height: auto; /* Maintain aspect ratio */
-    margin-right: 1rem; /* Add some spacing between the logo and title */
-    border-radius: 50%;
-  }
-
-  h1 {
-    margin: 0; /* Remove default margin for the title */
-  }
-
-  .photo {
-    max-width: calc(
-      30% - 10px
-    ); /* Adjust the width based on the number of photos per row */
-    height: auto;
-    margin: 5px; /* Add some spacing between photos */
-    border: 5px solid white; /* Add a white border around each photo */
-    border-radius: 10px; /* Add rounded corners to each photo */
+    border-radius: 100%;
+	margin-right: .5rem;
   }
 </style>
