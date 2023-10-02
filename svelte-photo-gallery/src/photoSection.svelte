@@ -27,27 +27,33 @@
         width: 90%;
         display: flex;
         flex-direction: column;
-        margin-bottom: 10rem;
+        padding-bottom: 8rem;
     }
 
     .photo-grid {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         grid-gap: 15px;
     }
 
     .photo-1 {
         width: 100%;
         height: auto;
-        grid-column: auto /span 2
+        grid-column: auto /span 6
 
     }
 
     .photo-2 {
         width: 100%;
         height: auto; 
-        grid-column: auto /span 1;
+        grid-column: auto /span 3;
+    }
+    
+    .photo-3 {
+        width: 100%;
+        height: auto; 
+        grid-column: auto /span 2;
     }
 
     .photo-subtext-section { 
