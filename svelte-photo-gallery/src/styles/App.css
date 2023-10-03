@@ -1,0 +1,132 @@
+.app {
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  background-color: #f0f0f0; /* Light gray background */
+  height: 97%;
+  overflow-y: hidden;
+  justify-content: space-around; /* Distribute space evenly around elements */
+}
+
+.side-nav {
+  min-width: 300px;
+  background-color: #fff; /* Background color for the side navigation */
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-end;
+  padding-top: 3rem;
+  height: auto;
+  flex-direction: column;
+  transition-property: all;
+  transition-duration: 2s;
+  font-size: 16px;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  color: #000;
+}
+
+.external-links {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.side-nav a {
+  color: black; /* Text color for navigation links */
+  text-decoration: none; /* Remove underlines from links */
+  margin-top: 1rem; /* Adjust spacing between links */
+  font-weight: 500;
+}
+
+.side-nav.side-nav.menu-open .external-links{
+  display: block;
+}
+
+.side-nav.side-nav.menu-open .nav-buttons a {
+  display: block;
+}
+
+.side-nav.menu-open {
+  flex-direction: column;
+  justify-content: end;
+  padding-top: 30rem;
+  gap: 4rem;
+  top: 0;
+  width: calc(100% - 2rem);
+  position: absolute;
+ 
+}
+
+.content {
+  background-color: #f0f0f0; /* Background color for the content area */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery {
+  width: 100%;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white; /* White gallery background */
+}
+
+.navbar-logo {
+  width: 30px; /* Adjust the width of the logo as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 100%;
+}
+
+@media (max-width: 1800px) {
+  .card-content {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .card-content {
+    flex-direction: column;
+  }
+
+  .gallery {
+    padding-top: 0;
+  }
+
+  .side-nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .external-links,
+  .nav-buttons a {
+    display: none;
+  }
+
+  
+}

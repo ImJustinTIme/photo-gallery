@@ -4,8 +4,11 @@ import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
+import alias from '@rollup/plugin-alias';
 import css from 'rollup-plugin-css-only';
+import path from "path";
 
+const projectRootDir = path.resolve(__dirname);
 const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
@@ -47,7 +50,15 @@ export default {
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
 		css({ output: 'bundle.css' }),
+		alias( {
+			entries: [
+				{ find: "@src", replacement: path.resolve(projectRootDir, 'src') },
+				{ find: "@styles", replacement: path.resolve(projectRootDir, 'src/styles') },
+				{ find: "@public", replacement: path.resolve(projectRootDir, 'public') },
+				{ find: "@components", replacement: path.resolve(projectRootDir, 'src/components') },
 
+			  ]
+		  }),
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
 		// some cases you'll need additional configuration -
