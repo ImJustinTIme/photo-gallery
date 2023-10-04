@@ -1,5 +1,7 @@
 <script>
-  export let photos, index;
+  import Image from "./image.svelte";
+
+  export let photos;
 
   let { names, description, title, id } = photos;
 </script>
@@ -10,12 +12,7 @@
   {/if}
   <div class="photo-grid">
     {#each names as photoName}
-      <img
-        {id}
-        class={`photo-${names.length}`}
-        src={photoName}
-        alt={`Photo ${index + 1}`}
-      />
+      <Image {id} src={photoName} alt={photoName}  className={`photo-${names.length}`}/>
     {/each}
   </div>
   <div class="photo-subtext-section">

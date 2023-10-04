@@ -1,6 +1,7 @@
 <script>
   import PhotoSection from "@components/photoSection.svelte";
   import Hamburger from "@components/hamburger.svelte";
+  import Image from "./components/image.svelte";
 
   $: menuOpen = false;
 
@@ -53,7 +54,7 @@
   <div class="card-content">
     <nav class={`side-nav ${menuOpen ? "menu-open" : ""}`}>
       <!-- Side navigation links -->
-        <img src="Signature1.jpg" alt="Logo" class="navbar-sig" />
+        <Image src="Signature1.jpg" alt="Logo" className="navbar-sig" />
         <div class="menu-items">
           <a href="#photos">Photographs</a>
           <a href="#digital-art">Digital Art</a>

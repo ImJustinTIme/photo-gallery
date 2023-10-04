@@ -31,6 +31,15 @@
     grid-column: auto / span 2;
   }
 
+  img {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+
+  img.loaded {
+    opacity: 1;
+  }
+
 
   .photo-subtext-section {
     display: flex;
