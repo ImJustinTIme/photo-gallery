@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "rollup -c ",
+    "build": "rollup --bundleConfigAsCjs -c ",
     "dev": "rollup --bundleConfigAsCjs -c -w",
     "start": "sirv public --no-clear"
   },
@@ -20,6 +20,7 @@
     "svelte": "^3.55.0"
   },
   "dependencies": {
+    "aws-amplify": "^5.3.11",
     "sirv-cli": "^2.0.0"
   }
 }
