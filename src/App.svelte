@@ -60,7 +60,7 @@
           <a href="mailto:jkuennen@proton.me">Contact Me</a>
           <a href="https://ko-fi.com/justinintime">Buy Me Coffee</a>
           <a href="https://ko-fi.com/justinintime/shop">Purchase Photos</a>
-          <a href="https://github.com/ImJustinTIme">GitHubs</a>
+          <a href="https://github.com/ImJustinTIme">GitHub</a>
         
         
       </div>

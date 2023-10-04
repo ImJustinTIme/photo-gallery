@@ -6,11 +6,12 @@
 
 <div class="photo-section">
   {#if title}
-    <h1 {id}>{title}</h1>
+    <h1>{title}</h1>
   {/if}
   <div class="photo-grid">
     {#each names as photoName}
       <img
+        {id}
         class={`photo-${names.length}`}
         src={photoName}
         alt={`Photo ${index + 1}`}
