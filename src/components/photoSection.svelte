@@ -7,7 +7,7 @@
   let { names, description, title, id } = photos;
   //gsap.registerPlugin(ScrollTrigger);
   let onLoad = () => {
-    gsap.to(`#f${index}`  , {
+    gsap.to('.photo-section'  , {
       opacity: 1, 
       y: 0,
       duration: 1.4,
