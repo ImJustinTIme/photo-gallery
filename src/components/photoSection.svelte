@@ -1,43 +1,47 @@
 <script>
-  import Image from "./image.svelte";
   import gsap from 'gsap';
-  import ScrollTrigger from 'gsap/ScrollTrigger';
-  import { onMount } from "svelte";
+  //import ScrollTrigger from 'gsap/ScrollTrigger';
+  //import { onMount } from "svelte";
 
   export let photos, index;
   let { names, description, title, id } = photos;
-  let photoSection = '';
-  
-
-
-
-  onMount(() => {
-    
-    if(ScrollTrigger.positionInViewport(`#f${index}`)) {
-      console.log('in View');
-    } 
+  //gsap.registerPlugin(ScrollTrigger);
+  let onLoad = () => {
     gsap.to(`#f${index}`  , {
-      scrollTrigger:{
-       trigger: `#f${index}`
-      },
       opacity: 1, 
       y: 0,
       duration: 1.4,
-      ease: 'ease-in-out'
+      ease: 'ease-in'
   });
-  })
+
+  gsap.to('.line', {
+    width: '200px',
+    opacity: 1,
+    duration: 2,
+    ease: 'ease-in'
+  });
+
+  gsap.to('.line-2', {
+    width: '80px',
+    opacity: 1,
+    duration: 1.4,
+    ease: 'ease-in'
+  });
+  };
 </script>
 
-<div style="opacity: 0;" id={`f${index}`} class={`photo-section`}>
+<div id={`f${index}`} class={`photo-section`}>
   {#if title}
     <h1>{title}</h1>
   {/if}
-  <div class="photo-grid">
+  <div class="photo-grid" let:onLoad>
     {#each names as photoName}
-      <Image id={id} src={photoName} alt={photoName}  className={`photo-${names.length}`}/>
+      <img on:load={onLoad} {id} src={photoName} alt={photoName}  class={`photo-${names.length}`}/>
     {/each}
   </div>
   <div class="photo-subtext-section">
     <div>{description}</div>
+    <span class='line'/>
+    <span class='line-2'/>
   </div>
 </div>

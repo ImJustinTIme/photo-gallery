@@ -33,6 +33,12 @@
       description: "I had some geese come right up to me to get the their picture taken",
     },
     {
+      names: [
+        "Foggy Day In Spokane.jpg"
+      ],
+      description: "Taken shortly after orignally getting the new camera. I really like the difference in leaves in the two trees.",
+    },
+    {
       names: ["Ultrawide Chickadee.jpg"],
       description:
         "Photo of black-capped chickadee taken spring 2023 in Spokane in wide ratio",
