@@ -4,8 +4,8 @@
   //import { onMount } from "svelte";
 
   export let photos, index;
-  let { names, description, title, id } = photos;
-  //gsap.registerPlugin(ScrollTrigger);
+  let { names, description, title, id, url} = photos;
+
   let onLoad = () => {
     gsap.to('.photo-section'  , {
       opacity: 1, 
@@ -30,7 +30,17 @@
   };
 </script>
 
-<div id={`f${index}`} class={`photo-section`}>
+<a
+  on:mouseenter={(event) => gsap.to(event.target, {
+    boxShadow: '0 3px 10px rgb(0 0 0 / 0.2)'
+  })}
+  on:mouseleave={(event) => gsap.to(event.target, {
+    boxShadow: 'none'
+  })}
+  href={url}
+  id={`f${index}`} 
+  class={`photo-section`}
+>
   {#if title}
     <h1>{title}</h1>
   {/if}
@@ -44,4 +54,4 @@
     <span class='line'/>
     <span class='line-2'/>
   </div>
-</div>
+</a>

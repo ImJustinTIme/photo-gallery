@@ -4,7 +4,8 @@
     flex-direction: column;
     opacity: 0;
     transform: translateY(5%);
-    padding-bottom: 8rem;
+    margin-bottom: 8rem;
+    padding: 15px;
   }
 
   .photo-section h1 {
