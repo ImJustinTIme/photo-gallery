@@ -1,4 +1,4 @@
-import App from './App.svelte';
+import App from '@components/App.svelte';
 import '@styles/App.css';
 import '@styles/photoSection.css';
 import '@styles/hamburgers.css';

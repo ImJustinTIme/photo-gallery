@@ -12,8 +12,18 @@
 	<link rel='stylesheet' href='/build/bundle.css'>
 	<link rel="stylesheet" href="https://use.typekit.net/iwl1nko.css">
 	<script defer src='/build/bundle.js'></script>
+	<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+	
 </head>
 
 <body>
+	<script>
+		kofiWidgetOverlay.draw('justinintime', {
+		  'type': 'floating-chat',
+		  'floating-chat.donateButton.text': 'Tip Me',
+		  'floating-chat.donateButton.background-color': '#d9534f',
+		  'floating-chat.donateButton.text-color': '#fff'
+		});
+		  </script>
 </body>
 </html>

@@ -55,6 +55,7 @@ export default {
 				{ find: "@src", replacement: path.resolve(projectRootDir, 'src') },
 				{ find: "@styles", replacement: path.resolve(projectRootDir, 'src/styles') },
 				{ find: "@public", replacement: path.resolve(projectRootDir, 'public') },
+				{ find: "@utils", replacement: path.resolve(projectRootDir, 'src/utils') },
 				{ find: "@components", replacement: path.resolve(projectRootDir, 'src/components') },
 
 			  ]

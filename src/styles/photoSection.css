@@ -68,6 +68,7 @@
   @media (max-width: 1200px) {
     .photo-section {
       padding: 1rem 0;
+      margin: 0;
     }
 
     .photo-2,
