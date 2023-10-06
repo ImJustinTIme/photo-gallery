@@ -9,7 +9,8 @@
 
 .app a {
   color: black;
-  text-decoration: none; /* Remove underlines from links */
+  text-decoration: none;
+  outline: none;
 }
 
 .card-content {
@@ -114,7 +115,7 @@ img {
 .navbar-sig {
   width: 200px;
   margin-bottom: 1rem;
-  height: auto;
+  height: 72.2px;
 }
 
 @media (max-width: 1800px) {
