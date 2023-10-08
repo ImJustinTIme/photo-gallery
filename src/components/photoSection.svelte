@@ -1,9 +1,8 @@
 <script>
   import gsap from 'gsap';
-  //import ScrollTrigger from 'gsap/ScrollTrigger';
-  //import { onMount } from "svelte";
+  import {lazyLoad} from '@utils/lazyLoad.js';
 
-  export let photos, index;
+  export let photos;
   let { names, description, title, id, url} = photos;
 
   const hoverOver = (event) => {
@@ -61,7 +60,7 @@
   on:mouseenter={hoverOver}
   on:mouseleave={hoverAway}
   href={url}
-  id={`f${index}`} 
+  {id} 
   class={`photo-section`}
 >
   {#if title}
@@ -69,7 +68,7 @@
   {/if}
   <div class="photo-grid" let:onLoad>
     {#each names as photoName}
-      <img on:load={onLoad} {id} src={photoName} alt={photoName}  class={`photo-${names.length}`}/>
+      <img on:load={onLoad} use:lazyLoad={photoName} alt={photoName}  class={`photo-${names.length}`}/>
     {/each}
   </div>
   <div class="photo-subtext-section">

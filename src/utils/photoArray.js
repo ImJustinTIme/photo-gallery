@@ -10,7 +10,7 @@ export const photos = [
       names: ["Hoco-1.jpg", "Rock Face.jpg"],
       url: 'https://ko-fi.com/s/5bc3593be3',
       description:
-        "Rock Structure Photos Taken Around the Spokane river, winter 2023.",
+        "Rock structure photos taken around the Spokane river, winter 2023.",
     },
     {
       names: [
@@ -20,7 +20,7 @@ export const photos = [
       ],
       url: 'https://ko-fi.com/s/5bc3593be3',
       description:
-        "Some interesting Graffiti found on rock structures near the Spokane River.",
+        "Some interesting graffiti found on rock structures near the Spokane River.",
     },
     {
       names: [
@@ -55,7 +55,7 @@ export const photos = [
         names: ["Walla Walla.jpg"],
         url: 'https://ko-fi.com/s/09d62cf6b7',
         description:
-            "Taken Near Amani Cellars Walla Walla, Washington.",
+            "Taken near Amani Cellars Walla Walla, Washington.",
     },
     {
         names: ["Nut Hatch-1.jpg", "Nut Hatch Lg-1.jpg"],
@@ -68,6 +68,6 @@ export const photos = [
       id: "digital-art",
       url: 'https://ko-fi.com/justinintime',
       names: ["Stripes-2.PNG", "Stripes.PNG"],
-      description: "Some Ipad wallpapers I made For personal use in Procreate.",
+      description: "Some ipad wallpapers I made For personal use in Procreate.",
     },
   ];
