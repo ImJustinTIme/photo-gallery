@@ -51,6 +51,31 @@
     padding: auto;
   }
 
+  a.link-button {
+    display:inline-block;
+    padding:0.4em 1.5em;
+    border:0.1em solid #222;
+    margin: 10px 5px;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-style: normal;
+    font-weight: 500;
+    color: #222222;
+    text-align:center;
+    transition: all 0.4s;
+    }
+
+    a.link-button:hover{
+      color:#fff;
+      background-color: #111;
+    }
+    @media all and (max-width:30em){
+    a.link-button {
+      display:block;
+      margin:0.4em auto;
+      }
+    } 
+
   .line {
     border: 1px solid #929292;
     width: 0;
