@@ -75,7 +75,7 @@ export const photos = [
       description: "'Fall Feelings' made on Procreate"
     },
     {
-      names: ["Just a little greener small.png", "Just a little greener var 1.PNG"],
+      names: ["Just a little greener small.png", "Just a little greener var 1.png"],
       description: "'Just a Little Geener' made in Adobe Illustrator"
     }
   ];
