@@ -70,4 +70,12 @@ export const photos = [
       names: ["Stripes-2.PNG", "Stripes.PNG"],
       description: "Some ipad wallpapers I made For personal use in Procreate.",
     },
+    {
+      names: ["Fall Feelings 1080p.png"],
+      description: "'Fall Feelings' made on Procreate"
+    },
+    {
+      names: ["Just a little greener small.png", "Just a little greener var 1.PNG"],
+      description: "'Just a Little Geener' made in Adobe Illustrator"
+    }
   ];

@@ -48,6 +48,8 @@
   </div>
   <div class="photo-subtext-section">
     <div>{description}</div>
+    {#if url}
     <a href={url} class='link-button'>Purchase Full Image</a>
+    {/if}
   </div>
 </a>
