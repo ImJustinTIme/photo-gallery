@@ -64,7 +64,7 @@ export const photos = [
           "Photos of some pygmy nuthatches found near the centennial trail.",
       },
       {
-        names: ["Hickory Hills Tree-1,jpg"],
+        names: ["Hickory Hills Tree-1.jpg"],
         url: 'https://ko-fi.com/s/86b8f0da6b',
         description:
           "Photo taken fall 2023 at Hickory Hills",
