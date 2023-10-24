@@ -63,6 +63,18 @@ export const photos = [
         description:
           "Photos of some pygmy nuthatches found near the centennial trail.",
       },
+      {
+        names: ["Hickory Hills Tree-1,jpg"],
+        url: 'https://ko-fi.com/s/86b8f0da6b',
+        description:
+          "Photo taken fall 2023 at Hickory Hills",
+      },
+      {
+        names: ["Hickory Hills Tree 2.jpg", "Spike Tree-1.jpg"],
+        url: 'https://ko-fi.com/s/86b8f0da6b',
+        description:
+          "Photo taken fall 2023 at Hickory Hills",
+      },
     {
       title: "Digital Art",
       id: "digital-art",
@@ -72,10 +84,12 @@ export const photos = [
     },
     {
       names: ["Fall Feelings 1080p.png"],
+      url: 'https://ko-fi.com/s/fdbde88901',
       description: "'Fall Feelings' made on Procreate"
     },
     {
-      names: ["Just a little greener small.png", "Just a little greener var 1.png"],
+      names: ["Just a little greener small.png", "Just a little greener var.png"],
+      url: 'https://ko-fi.com/s/20940867ec',
       description: "'Just a Little Geener' made in Adobe Illustrator"
     }
   ];
