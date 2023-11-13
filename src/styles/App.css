@@ -17,18 +17,21 @@
   display: flex;
   flex-direction: row;
   width: 80%;
-  background-color: #f0f0f0; /* Light gray background */
+  background-color: #f0f0f0;
+  /* Light gray background */
   height: 97%;
   overflow-y: hidden;
-  justify-content: space-around; /* Distribute space evenly around elements */
+  justify-content: space-around;
+  /* Distribute space evenly around elements */
 }
 
 .side-nav {
   min-width: 300px;
-  background-color: #fff; /* Background color for the side navigation */
+  background-color: #fff;
+  /* Background color for the side navigation */
   display: flex;
   justify-content: start;
-  align-items:flex-end;
+  align-items: flex-end;
   padding-top: 3rem;
   height: auto;
   flex-direction: column;
@@ -51,9 +54,12 @@
 }
 
 .side-nav a {
-  color: black; /* Text color for navigation links */
-  text-decoration: none; /* Remove underlines from links */
-  margin-top: .6rem; /* Adjust spacing between links */
+  color: black;
+  /* Text color for navigation links */
+  text-decoration: none;
+  /* Remove underlines from links */
+  margin-top: .6rem;
+  /* Adjust spacing between links */
   margin-right: .6rem;
   font-size: 26px;
   font-weight: 400;
@@ -64,7 +70,7 @@
   flex-direction: column;
   align-items: end;
   gap: 1rem;
-  transition: all .5s ease;
+  transition: all .3s ease;
 }
 
 .side-nav.side-nav.menu-open .menu-items {
@@ -73,12 +79,13 @@
 }
 
 .side-nav.menu-open {
-    flex-direction: column;
-    gap: 1rem;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .content {
-  background-color: #f0f0f0; /* Background color for the content area */
+  background-color: #f0f0f0;
+  /* Background color for the content area */
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -89,7 +96,7 @@
 
 img {
   opacity: 0;
-  transition: all 1.4s ease-in;
+  transition: all .4s ease-in;
 }
 
 .container {
@@ -103,12 +110,15 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white; /* White gallery background */
+  background-color: white;
+  /* White gallery background */
 }
 
 .navbar-logo {
-  width: 30px; /* Adjust the width of the logo as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 30px;
+  /* Adjust the width of the logo as needed */
+  height: auto;
+  /* Maintain aspect ratio */
   border-radius: 100%;
 }
 
@@ -152,5 +162,5 @@ img {
     padding-right: 15px;
     padding-bottom: 4px;
   }
-  
+
 }

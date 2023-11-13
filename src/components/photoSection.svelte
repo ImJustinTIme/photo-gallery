@@ -21,7 +21,7 @@
     gsap.to(".photo-section", {
       opacity: 1,
       y: 0,
-      duration: 1.4,
+      duration: .4,
       ease: "ease-in",
     });
   };
