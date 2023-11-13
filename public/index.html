@@ -5,8 +5,8 @@
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width,initial-scale=1'>
 	<meta name="description"
-		content="A website to display the art and photography of Justin Kuennen. Filled with links where you can download high resolution versions of the photos display. Check it out!"
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif">
+		content="A website to display the art and photography of Justin Kuennen. Filled with links where you can download high resolution versions of the photos display. Check it out!">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap">
 	<title>Justin Photography & Art</title>
 
 	<link rel='stylesheet' href='/global.css'>
@@ -14,14 +14,15 @@
 	<link rel='icon' type='image/png' href='/J logo.PNG'>
 	<link rel='stylesheet' href='/build/bundle.css'>
 	<link rel="stylesheet" href="https://use.typekit.net/iwl1nko.css">
+	<link rel="preload" fetchpriority="high" as="image" href="Black-capped Chickadee-2.jpg" type="image/jpg">
 	<script defer src='/build/bundle.js'></script>
-	<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+	<script async src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
 
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H1G0WBV8WV"></script>
-<script>
+<script async>
 	window.dataLayer = window.dataLayer || [];
 	function gtag() { dataLayer.push(arguments); }
 	gtag('js', new Date());
@@ -33,6 +34,7 @@
 	<script>
 		kofiWidgetOverlay.draw('justinintime', {
 			'type': 'floating-chat',
+			'title': 'kofi-tip-me-button',
 			'floating-chat.donateButton.text': 'Tip Me',
 			'floating-chat.donateButton.background-color': '#d9534f',
 			'floating-chat.donateButton.text-color': '#fff'
