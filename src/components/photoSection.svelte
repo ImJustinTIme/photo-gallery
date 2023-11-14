@@ -27,7 +27,7 @@
   };
 </script>
 
-<a
+<div
   on:mouseenter={hoverOver}
   on:mouseleave={hoverAway}
   {id}
@@ -52,4 +52,4 @@
     <a href={url} class='link-button'>Download Full Resolution</a>
     {/if}
   </div>
-</a>
+</div>
