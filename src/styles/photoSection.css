@@ -1,11 +1,13 @@
   .photo-section {
     width: 90%;
     display: flex;
-    flex-direction: column;
     opacity: 0;
+    flex-direction: column;
     transform: translateY(8%);
     margin-bottom: 7rem;
     padding: 15px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
   }
 
   .photo-section h1 {
@@ -52,23 +54,23 @@
   }
 
   a.link-button {
-    display:inline-block;
-    padding:0.4em 1.5em;
-    border:0.1em solid #222;
+    display: inline-block;
+    padding: 0.4em 1.5em;
+    border: 0.1em solid #222;
     margin: 10px 5px;
     box-sizing: border-box;
-    text-decoration:none;
+    text-decoration: none;
     font-style: normal;
     font-weight: 500;
     color: #222222;
-    text-align:center;
+    text-align: center;
     transition: all 0.4s;
-    }
+  }
 
-    a.link-button:hover{
-      color:#fff;
-      background-color: #111;
-    }
+  a.link-button:hover {
+    color: #fff;
+    background-color: #111;
+  }
 
   .line {
     border: 1px solid #929292;
@@ -88,6 +90,7 @@
     .photo-section {
       padding: 1rem;
       margin: 0;
+      margin-bottom: 10px;
     }
 
     .photo-2,

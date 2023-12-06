@@ -21,18 +21,13 @@
     gsap.to(".photo-section", {
       opacity: 1,
       y: 0,
-      duration: .4,
+      duration: 0.4,
       ease: "ease-in",
     });
   };
 </script>
 
-<div
-  on:mouseenter={hoverOver}
-  on:mouseleave={hoverAway}
-  {id}
-  class={`photo-section`}
->
+<div {id} class={`photo-section`}>
   {#if title}
     <h1>{title}</h1>
   {/if}
@@ -49,7 +44,7 @@
   <div class="photo-subtext-section">
     <div>{description}</div>
     {#if url}
-    <a href={url} class='link-button'>Download Full Resolution</a>
+      <a href={url} class="link-button">Download Full Resolution</a>
     {/if}
   </div>
 </div>
