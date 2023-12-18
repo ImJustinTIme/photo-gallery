@@ -14,6 +14,9 @@ dependencies:
   sirv-cli:
     specifier: ^2.0.0
     version: 2.0.2
+  underscore:
+    specifier: ^1.13.6
+    version: 1.13.6
 
 devDependencies:
   '@rollup/plugin-alias':
@@ -6886,6 +6889,10 @@ packages:
   /ulid@2.3.0:
     resolution: {integrity: sha512-keqHubrlpvT6G2wH0OEfSW4mquYRcbe/J8NMmveoQOjUqmo+hXtO+ORCpWhdbZ7k72UtY61BL7haGxW6enBnjw==}
     hasBin: true
+    dev: false
+
+  /underscore@1.13.6:
+    resolution: {integrity: sha512-+A5Sja4HP1M08MaXya7p5LvjuM7K6q/2EaC0+iovj/wOcMsTzMvDFbasi/oSapiwOlt252IqsKqPjCl7huKS0A==}
     dev: false
 
   /undici-types@5.26.5:

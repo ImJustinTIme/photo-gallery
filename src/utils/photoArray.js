@@ -1,4 +1,7 @@
-export const photos = [
+import _ from 'underscore';
+export const artArr = {
+  photos: [
+
     {
       id: "photos",
       names: ["Black-capped Chickadee.webp"],
@@ -24,20 +27,20 @@ export const photos = [
     },
     {
       names: [
-        "Goose Feet B&W.webp", 
+        "Goose Feet B&W.webp",
         "Goose Bay Watch.webp"
       ],
       url: 'https://ko-fi.com/s/588e7dc0f0',
       description: "I had some geese come right up to me to get the their picture taken.",
     },
     {
-        names: [
-          "Goose Head-1.webp", 
-          "Goose Smerk-1.webp"
-        ],
-        url: 'https://ko-fi.com/s/588e7dc0f0',
-        description: "Some more close ups of the geese.",
-      },
+      names: [
+        "Goose Head-1.webp",
+        "Goose Smerk-1.webp"
+      ],
+      url: 'https://ko-fi.com/s/588e7dc0f0',
+      description: "Some more close ups of the geese.",
+    },
     {
       names: [
         "Foggy Day In Spokane.webp"
@@ -46,37 +49,41 @@ export const photos = [
       description: "Taken shortly after orignally getting the new camera. I really like the difference in leaves in the two trees.",
     },
     {
-        names: ["Ultrawide Chickadee.webp"],
-        url: 'https://ko-fi.com/s/d87332cd02',
-        description:
-          "Photo of black-capped chickadee taken spring 2023 in Spokane in wide ratio.",
-      },
-    {
-        names: ["Walla Walla.webp"],
-        url: 'https://ko-fi.com/s/09d62cf6b7',
-        description:
-            "Taken near Amani Cellars Walla Walla, Washington.",
+      names: ["Ultrawide Chickadee.webp"],
+      url: 'https://ko-fi.com/s/d87332cd02',
+      description:
+        "Photo of black-capped chickadee taken spring 2023 in Spokane in wide ratio.",
     },
     {
-        names: ["Nut Hatch-1.webp", "Nut Hatch Lg-1.webp"],
-        url: 'https://ko-fi.com/s/d87332cd02',
-        description:
-          "Photos of some pygmy nuthatches found near the centennial trail.",
-      },
-      {
-        names: ["Hickory Hills Tree-1.webp"],
-        url: 'https://ko-fi.com/s/86b8f0da6b',
-        description:
-          "Photo taken fall 2023 at Hickory Hills",
-      },
-      {
-        names: ["Hickory Hills Tree 2.webp", "Spike Tree-1.webp"],
-        url: 'https://ko-fi.com/s/86b8f0da6b',
-        description:
-          "Photo taken fall 2023 at Hickory Hills",
-      },
+      names: ["Walla Walla.webp"],
+      url: 'https://ko-fi.com/s/09d62cf6b7',
+      description:
+        "Taken near Amani Cellars Walla Walla, Washington.",
+    },
     {
-      title: "Digital Art",
+      names: [
+        "Nut Hatch-1.webp",
+        "Nut Hatch Lg-1.webp"
+      ],
+      url: 'https://ko-fi.com/s/d87332cd02',
+      description:
+        "Photos of some pygmy nuthatches found near the centennial trail.",
+    },
+    {
+      names: ["Hickory Hills Tree-1.webp"],
+      url: 'https://ko-fi.com/s/86b8f0da6b',
+      description:
+        "Photo taken fall 2023 at Hickory Hills",
+    },
+    {
+      names: ["Hickory Hills Tree 2.webp", "Spike Tree-1.webp"],
+      url: 'https://ko-fi.com/s/86b8f0da6b',
+      description:
+        "Photo taken fall 2023 at Hickory Hills",
+    },
+  ],
+  digitalArt: [
+    {
       id: "digital-art",
       url: 'https://ko-fi.com/justinintime',
       names: ["Stripes-2.webp", "Stripes.webp"],
@@ -92,4 +99,21 @@ export const photos = [
       url: 'https://ko-fi.com/s/20940867ec',
       description: "'Just a Little Geener' made in Adobe Illustrator"
     }
-  ];
+  ]
+};
+
+export const getPhotoArray = () => {
+  const {
+    photos,
+    digitalArt
+  } = artArr;
+
+  const shuffledDigitalArt = _.shuffle(digitalArt);
+  shuffledDigitalArt[0].title = "Digital Art";
+
+  return [
+    ..._.shuffle(photos),
+    ...shuffledDigitalArt
+  ]
+}
+
