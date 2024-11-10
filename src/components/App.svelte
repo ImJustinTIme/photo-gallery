@@ -4,7 +4,8 @@
   import { getPhotoArray } from "@utils/photoArray.js";
   import { lazyLoad } from "@utils/lazyLoad.js";
 
-  $: menuOpen = false;
+  let menuOpen = $state(false);
+  
 
   let makeActive = () => {
     menuOpen = !menuOpen;

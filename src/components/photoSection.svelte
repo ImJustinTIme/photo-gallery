@@ -2,7 +2,7 @@
   import gsap from "gsap";
   import { lazyLoad } from "@utils/lazyLoad.js";
 
-  export let photos;
+  let { photos } = $props();
   let { names, description, title, id, url } = photos;
 
   const hoverOver = (event) => {
@@ -31,10 +31,10 @@
   {#if title}
     <h1>{title}</h1>
   {/if}
-  <div class="photo-grid" let:onLoad>
+  <div class="photo-grid">
     {#each names as photoName}
       <img
-        on:load={onLoad}
+        onload={onLoad}
         use:lazyLoad={photoName}
         alt={photoName}
         class={`photo-${names.length}`}
@@ -44,7 +44,7 @@
   <div class="photo-subtext-section">
     <div>{description}</div>
     {#if url}
-      <a href={url} class="link-button">Download Full Resolution</a>
+      <a href={url} class="link-button">Purchase Full Resolution Download</a>
     {/if}
   </div>
 </div>

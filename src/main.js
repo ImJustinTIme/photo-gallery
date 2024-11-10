@@ -5,9 +5,10 @@ import '@styles/hamburgers.css';
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { mount } from "svelte";
 
 gsap.registerPlugin(ScrollTrigger);
-const app = new App({
+const app = mount(App, {
 	target: document.body
 });
 
