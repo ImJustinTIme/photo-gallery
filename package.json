@@ -1,28 +1,22 @@
 {
-  "name": "svelte-app",
+  "name": "photo-site",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "rollup --bundleConfigAsCjs -c ",
-    "dev": "rollup --bundleConfigAsCjs -c -w",
-    "start": "sirv public --no-clear"
+    "build": "vite build",
+    "dev": "vite",
+    "start": "vite preview"
   },
   "devDependencies": {
-    "@rollup/plugin-alias": "^5.1.1",
-    "@rollup/plugin-commonjs": "^24.1.0",
-    "@rollup/plugin-node-resolve": "^15.3.0",
-    "@rollup/plugin-terser": "^0.4.4",
-    "rollup": "^3.29.5",
-    "rollup-plugin-css-only": "^4.5.2",
-    "rollup-plugin-livereload": "^2.0.5",
-    "rollup-plugin-svelte": "^7.2.2",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "@types/node": "^22.10.2",
     "svelte": "^5.1.13"
   },
   "dependencies": {
     "aws-amplify": "^5.3.26",
     "gsap": "^3.12.5",
-    "sirv-cli": "^2.0.2",
-    "underscore": "^1.13.7"
+    "underscore": "^1.13.7",
+    "vite": "^6.0.5"
   }
 }
