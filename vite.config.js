@@ -16,6 +16,7 @@ export default defineConfig({
   plugins: [
     svelte({
       /* plugin options */
+      configFile: 'svelte.config.js'
     })
   ]
 });

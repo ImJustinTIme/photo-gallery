@@ -16,6 +16,7 @@
   "dependencies": {
     "aws-amplify": "^5.3.26",
     "gsap": "^3.12.5",
+    "svelte-preprocess": "^6.0.3",
     "underscore": "^1.13.7",
     "vite": "^6.0.5"
   }
