@@ -13,6 +13,9 @@
     "@types/node": "^22.10.2",
     "svelte": "^5.1.13"
   },
+  "optionalDependencies":{
+    "@rollup/rollup-linux-x64-gnu": "^4.29.1"
+  },
   "dependencies": {
     "aws-amplify": "^5.3.26",
     "gsap": "^3.12.5",
